@@ -52,7 +52,7 @@ $ch = curl_init();
     }
 }
 function is_join($user,$chat){
-    $content = json_decode(file_get_contents("https://api.telegram.org/bot".579825326:AAH2F3eVjQRorsKQPB47UhJLAHGMuHJ3dVw."/getChatMember?chat_id=".$chat."&user_id=".$user));
+    $content = json_decode(file_get_contents("https://api.telegram.org/bot"TOKEN"/getChatMember?chat_id=".$chat."&user_id=".$user));
     $status = $content->result->status;
     if($status != "left"){
         return true;
